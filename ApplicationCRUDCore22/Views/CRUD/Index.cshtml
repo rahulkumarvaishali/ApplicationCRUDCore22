@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AppDbContext>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-6"><h1>Table List</h1></div>
+    <div class="col-6 text-end">
+        <a asp-action="Form" asp-controller="CRUD" class="btn btn-success">
+            <i class="bi bi-file-earmark-plus"></i>add Data
+        </a>
+        </div>
+</div>
+
+<table class="table table-bordered">
+   <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Detail</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+   </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.Email</td>
+                <td>@item.Mobile</td>
+                <td>@item.Address</td>
+                <td>
+                    <a asp-action="Details" asp-controller="CRUD" asp-route-id="@item.id" class="btn btn-primary"><i class="bi bi-ticket-detailed"></i></a>
+                </td>
+                
+                <td>
+                    <a asp-action="Delete" asp-controller="CRUD" asp-route-id="@item.id" class="btn btn-danger"><i class="bi bi-trash3-fill "></i></a>
+                </td>
+
+
+                <td>
+                    <a asp-action="Edit" asp-controller="CRUD" asp-route-id="@item.id" class="btn btn-outline-primary"><i class="bi bi-textarea-t"></i></a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+
+
+
+</table>
+
+

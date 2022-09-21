@@ -1,0 +1,45 @@
+﻿@model ApplicationCRUDCore22.Models.AppDbContext
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Edit Form</h1>
+<br />
+<form asp-action="Edit">
+    <input type="hidden" asp-for="id"/>
+    <div class="roe">
+        <div class="col-3"><label asp-for="name"></label></div>
+        <div class="col-6"><input asp-for="name"class="form-control"/></div>
+        <div class="col-3"><span asp-validation-for="name" class="text-danger"></span></div>
+    </div>
+    
+    <div class="roe">
+        <div class="col-3"><label asp-for="Email"></label></div>
+        <div class="col-6"><input asp-for="Email "class="form-control "/></div>
+        <div class="col-3"><span asp-validation-for="Email" class="text-danger"></span></div>
+    </div>
+    
+    <div class="roe">
+        <div class="col-3"><label asp-for="Mobile"></label></div>
+        <div class="col-6"><input asp-for="Mobile" class="form-control" /></div>
+        <div class="col-3"><span asp-validation-for="Mobile" class="text-danger"></span></div>
+    </div>
+    
+    <div class="roe">
+        <div class="col-3"><label asp-for="Address"></label></div>
+        <div class="col-6"><input asp-for="Address" class="form-control" /></div>
+        <div class="col-3"><span asp-validation-for="Address" class="text-danger"></span></div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-3"></div>
+            <div class="col-6">
+                <input type="submit" value="Form" class="btn btn-primary"/>
+                <a asp-action="Index" asp-controller="CRUD" class="btn btn-danger">Back To List</a>
+
+        </div>
+
+    </div>
+
+</form>

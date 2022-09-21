@@ -1,0 +1,38 @@
+﻿@model ApplicationCRUDCore22.Models.AppDbContext
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="row">
+    <div class="col-3">@Html.DisplayNameFor(model=>model.id)</div>
+    <div class="col-3">@Html.DisplayFor(model=>model.id)</div>
+</div>
+
+<div class="row">
+    <div class="col-3">@Html.DisplayNameFor(model=>model.name)</div>
+    <div class="col-3">@Html.DisplayFor(model=>model.name)</div>
+</div>
+
+<div class="row">
+    <div class="col-3">@Html.DisplayNameFor(model=>model.Email)</div>
+    <div class="col-3">@Html.DisplayFor(model=>model.Email)</div>
+</div>
+
+<div class="row">
+    <div class="col-3">@Html.DisplayNameFor(model=>model.Mobile)</div>
+    <div class="col-3">@Html.DisplayFor(model=>model.Mobile)</div>
+</div>
+
+<div class="row">
+    <div class="col-3">@Html.DisplayNameFor(model=>model.Address)</div>
+    <div class="col-3">@Html.DisplayFor(model=>model.Address)</div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-3"><a asp-action="Edit" asp-controller="CRUD" asp-route-id="@Model.id" class="btn btn-primary">Edit</a></div>
+        <div class="col-6"><a asp-action="Index"  class="btn btn-danger">Back to List</a></div>
+    </div>
+</div>

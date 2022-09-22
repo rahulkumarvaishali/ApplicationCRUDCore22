@@ -132,12 +132,7 @@ namespace ApplicationCRUDCore22.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Login()
-        {
-            IEnumerable<AppDbContext> appDbContexts = _Db.appDbContexts;
-            return View(appDbContexts);
-        }
-
+        
         
     }
 }
